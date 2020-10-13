@@ -1,0 +1,9 @@
+@echo off
+CLS
+ECHO ************************************************************
+
+ECHO.
+ECHO Efetuando copia dos arquivos....aguarde......!
+ECHO.
+
+xcopy C:\Users\Wesley\Desktop\ola /d /e /c /i /h /r /k /y "E:\backup\%DATE:/=-%"
