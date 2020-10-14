@@ -15,7 +15,7 @@ xcopy E:\omega /d /e /c /i /h /r /k /y "C:\backup\%DATE:/=-%"
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 echo # GERANDO LOG DE ARQUIVOS E/OU DIRETORIOS COPIADOS  #
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-dir /s %DESTINO% > %LOG%\%DATE:/=-%
+dir /s %DESTINO% > %LOG%\%DATE:/=-%.txt
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 echo #          BACKUP REALIZADO COM SUCESSO             #
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
