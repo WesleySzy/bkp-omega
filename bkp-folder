@@ -1,0 +1,22 @@
+cls
+echo off
+cls
+REM - VARIAVEIS
+set DESTINO="C:\backup\%DATE:/=-%"
+set LOG=C:\backup\LOG
+REM - set EMAIL=wesleyshoptendtudo@gmail.com
+REM - ESTRUTURA
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+echo #         COPIA DE ARQUIVOS E/OU DIRETORIOS         #
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+echo *******************************************************************
+echo *******************************************************************
+xcopy E:\omega /d /e /c /i /h /r /k /y "C:\backup\%DATE:/=-%"
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+echo # GERANDO LOG DE ARQUIVOS E/OU DIRETORIOS COPIADOS  #
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+dir /s %DESTINO% > %LOG%\%DATE:/=-%
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+echo #          ENVIANDO E-MAIL COM LOG EM ANEXO         #
+echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+REM blat.exe -attach "  ------------  " -p configsmtp -to %EMAIL% -subject BACKUP -body "O backup foi realizado com sucesso!" -server 192.168.1.200:25 -f %EMAIL%
