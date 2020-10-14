@@ -17,6 +17,9 @@ echo # GERANDO LOG DE ARQUIVOS E/OU DIRETORIOS COPIADOS  #
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 dir /s %DESTINO% > %LOG%\%DATE:/=-%
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
-echo #          ENVIANDO E-MAIL COM LOG EM ANEXO         #
+echo #          BACKUP REALIZADO COM SUCESSO             #
 echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+REM echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
+REM echo #          ENVIANDO E-MAIL COM LOG EM ANEXO         #
+REM echo # - - - - - - - - - - - - - - - - - - - - - - - - - #
 REM blat.exe -attach "  ------------  " -p configsmtp -to %EMAIL% -subject BACKUP -body "O backup foi realizado com sucesso!" -server 192.168.1.200:25 -f %EMAIL%
